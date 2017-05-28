@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#87000000">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/series_lv"
+        android:id="@+id/series_lv"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <TextView
+        android:text="Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_names"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/series_lv"
+        android:layout_toEndOf="@+id/series_lv"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/white"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_2sdp" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_genres"
+        android:layout_alignLeft="@+id/show_genres"
+        android:layout_alignStart="@+id/show_genres"
+        android:id="@+id/show_dates"
+        android:textStyle="normal|italic"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"/>
+
+    <TextView
+        android:text="rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/show_names"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/ratings_tv"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_2sdp"/>
+
+    <TextView
+        android:text="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratings_tv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/show_ratings"
+        android:textStyle="normal|bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_2sdp"/>
+
+    <TextView
+        android:text="Genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/show_genres"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        android:textStyle="normal|italic"
+        android:layout_below="@+id/show_names"
+        android:layout_alignLeft="@+id/show_names"
+        android:layout_alignStart="@+id/show_names" />
+
+</RelativeLayout>

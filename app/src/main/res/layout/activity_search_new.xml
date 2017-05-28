@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/search_wall"
+    android:id="@+id/search_layout">
+
+    <TextView
+        android:text="Search by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/by_label"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/by_label"
+        android:layout_toRightOf="@+id/by_label"
+        android:layout_toEndOf="@+id/by_label"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:id="@+id/by_spinner"
+        android:entries="@array/search"/>
+
+    <TextView
+        android:text="Keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/by_spinner"
+        android:layout_alignLeft="@+id/by_label"
+        android:layout_alignStart="@+id/by_label"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/kw_label"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/kw_label"
+        android:layout_alignLeft="@+id/by_spinner"
+        android:layout_alignStart="@+id/by_spinner"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:id="@+id/search_value"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pretraga_dug"
+        android:layout_below="@+id/search_value"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageButton7"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:onClick="onSearchClicked" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageButton7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/part_lv" />
+</RelativeLayout>

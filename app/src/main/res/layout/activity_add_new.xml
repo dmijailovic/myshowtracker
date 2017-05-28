@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_wall"
+    android:id="@+id/add_layout">
+
+    <TextView
+        android:text="Show title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:id="@+id/tv_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textAllCaps="true"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/name_et"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic" />
+
+    <TextView
+        android:text="genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/tv_genre"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/tv_genre"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/genre_et"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic" />
+
+    <TextView
+        android:text="Date you watched it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/tv_date"
+        android:layout_below="@+id/genre_et"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:textStyle="normal|bold"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/tv_date"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/date_et"
+        android:textColor="@color/white"
+        android:textStyle="normal|italic"
+        android:textAlignment="center" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/type_rg"
+        android:layout_below="@+id/date_et"
+        android:layout_centerHorizontal="true"
+        android:checkedButton="@+id/movie_rb">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            android:id="@+id/movie_rb"
+            android:textSize="@dimen/_18sdp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Series"
+            android:textStyle="normal|bold"
+            android:textColor="@color/white"
+            android:id="@+id/series_rb"
+            android:textSize="@dimen/_18sdp"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:text="Favourite?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type_rg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/favourite_cb"
+        android:textColor="@color/white"
+        android:textStyle="normal|bold"
+        android:textSize="@dimen/_18sdp"/>
+
+    <TextView
+        android:text="RATING"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/rating_tv"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="normal|bold"
+        android:textColor="@color/white"
+        android:layout_below="@+id/favourite_cb"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating_tv"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ratingBar"
+        android:numStars="5"
+        android:rating="1"
+        android:stepSize="0.5" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/button_add"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:id="@+id/imageButton6"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:onClick="onAddClicked" />
+
+</RelativeLayout>
